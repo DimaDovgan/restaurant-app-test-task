@@ -1,0 +1,199 @@
+.title{
+    font-family: var(--font-italianno);
+    font-size: 35px;
+    color: #000;
+    text-align: center;
+    margin: 0 auto ;
+    position: relative;
+    width: 105px; /* Явно задаємо ширину текстового блоку */
+    height: 44px; /* Явно задаємо висоту блоку */
+    margin-bottom: 20px;
+    &::after {
+      content: '';
+      display: block;
+      margin: -8px auto 0; /* Відступ між текстом і лінією */
+      width: 70px; /* Ширина підкреслення */
+      height: 1px; /* Товщина підкреслення */
+      background-color: #ffb74d;
+    }
+    @media (min-width: 1100px) {
+        margin: 0 auto 20px;
+      }
+    
+    
+  }
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    // padding: 20px;
+    
+  }
+
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; // Це забезпечить, щоб внутрішні елементи не виходили за межі border-radius
+  }
+  
+  .searchInput {
+    flex-grow: 1;
+    height: 100%;
+    padding: 0 10px;
+    font-family: var(--font-roboto);
+    font-size: 14px;
+    border: none;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &::placeholder {
+      color: #999;
+    }
+  }
+  
+  .searchButton {
+    height: 100%;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    background-color: #ffffff;
+    color: #747474;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+    &:hover {
+      color: #FCAC45;
+    }
+  }
+  .searchButton::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 1px;
+    height: 60%; 
+    background-color: #FCAC45;
+  }
+  @media (min-width: 1100px) {
+    .searchContainer {
+      width: 500px;
+    height: 40px;
+    }
+    .searchButton {
+      font-size: 18px;
+    }
+    .searchInput{
+      font-size: 18px;
+    }
+  }
+
+
+  // .searchContainer {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   margin-top: 20px;
+  //   width: 360px; /* Встановлюємо ширину контейнера */
+  //   height: 32px;  /* Встановлюємо висоту контейнера */
+  // }
+  
+  // .searchInput {
+  //   padding: 6px; /* Зменшено padding для відповідності висоті */
+  //   font-size: 14px; /* Зменшено розмір шрифту для адаптації */
+  //   font-family: var(--font-italianno);
+  //   border: 1px solid #ccc;
+  //   flex: 1; /* Встановлюємо гнучке розширення для входу */
+  //   height: 100%; /* Заповнення всієї висоти контейнера */
+  // }
+  
+  // .searchButton {
+  //   padding: 0 12px; /* Мінімізуємо внутрішні відступи кнопки */
+  //   font-size: 14px; /* Зменшено розмір шрифту */
+  //   background-color: #FCAC45;
+  //   border: none;
+  //   border-radius: 4px;
+  //   height: 100%; /* Заповнення всієї висоти контейнера */
+  //   cursor: pointer;
+  // }
+
+  // .searchContainer {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   margin-top: 20px;
+  //   width: 360px;
+  //   height: 32px;
+  //   border: 1px solid #ccc;
+  // }
+  // .searchInput {
+  //   flex-grow: 1;
+  //   height: 100%;
+  //   padding: 0 10px;
+  //   font-size: 14px;
+  //   border: none;
+  //   border-right: 1px solid #ccc;
+  
+  //   &:focus {
+  //     outline: none;
+  //   }
+  
+  //   &::placeholder {
+  //     color: #999;
+  //   }
+  // }
+  
+  // .searchButton {
+  //   height: 100%;
+  //   padding: 0 15px;
+  //   font-size: 14px;
+  //   background-color: white;
+  //   border: none;
+  //   cursor: pointer;
+  
+  //   &:hover {
+  //     background-color: #f5f5f5;
+  //   }
+  // }
+
+  
+
+
+  // .searchContainer {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   margin-top: 20px;
+  //   width: 360px;
+  //   height: 32px;
+  // }
+  
+  // .searchInput {
+  //   padding: 10px;
+  //   font-size: 16px;
+  //   font-family: var(--font-italianno);
+  //   border: 1px solid #ccc;
+  //   // width: 200px;
+  // }
+  
+  // .searchButton {
+  //   padding: 10px 20px;
+  //   font-size: 16px;
+  //   background-color: #FCAC45;
+  //   border: none;
+  //   border-radius: 4px;
+  //   cursor: pointer;
+  // }
+  
+  // .searchButton:hover {
+  //   background-color: #e59434;
+  // }

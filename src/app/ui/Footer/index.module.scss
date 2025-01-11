@@ -1,0 +1,132 @@
+.footer {
+    background-color: #EDEDED;
+    color: #000000;
+    font-family:var(--font-roboto);
+    padding: 35px 10px;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    @media (min-width: 1100px) {
+        background-color:#ffffff ;
+    }
+
+    
+  
+    .container {
+       
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 380px;
+      margin: 0 auto;
+      @media (min-width: 1100px) {
+        justify-content: space-between;
+        width: 1100px;
+
+      }
+    }
+  
+    .center {
+      order: -1;
+      text-align: center;
+  
+      @media (min-width: 1100px) {
+        order: 0;
+      }
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+  
+      @media (min-width: 1100px) {
+        
+            flex-direction: row; 
+            justify-content: space-evenly; 
+            width: 100%;
+            gap: 450px; 
+
+      }
+    }
+  
+    .section {
+      flex: 1;
+      text-align: center;
+  
+      h3 {
+        font-size: 27px;
+        margin-bottom: 5px;
+        font-family:  var(--font-italianno);
+      }
+  
+      p {
+        font-size: 12px;
+        font-family:  var(--font-roboto);
+        margin: 5px 0;
+      }
+    }
+  
+    .title {
+      font-style: var(--font-italianno);
+      color: #000000;
+      border-bottom: 1px solid #FCAC45;
+      display: inline-block;
+      margin-bottom: 5px;
+
+      @media (min-width: 1100px) {
+        border: none;
+      }
+
+
+    }
+  
+    .copyright {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #000000;
+  
+      @media (min-width: 1100px) {
+        margin-top: 70px;
+      }
+    }
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #FCAC45;
+    margin: 15px auto;
+    @media (min-width: 1100px) {
+        position: absolute; 
+        top: -20px; 
+        left: 0; 
+    }
+  }
+
+  @media (min-width: 1100px) {
+  .center {
+    position: absolute; 
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    
+  }
+}
+
+
+    @media (min-width: 1100px) {
+        .linel{
+            width: 100%; 
+            height: 100px;
+            border-right: 1px solid #FCAC45; 
+        }
+        .liner{
+            width: 100%; 
+            height: 100px;
+            border-left: 1px solid #FCAC45; 
+        }
+
+    }

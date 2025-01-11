@@ -1,0 +1,45 @@
+.heroContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/images/heroMobil.png'); 
+    background-size: cover;
+    background-position: center;
+  
+    @media (min-width: 1400px) {
+      background-image: url('/images/heroDesctop.png'); 
+    }
+  
+    .heroText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+  
+      h1 {
+        
+      font-family: var(--font-italianno);
+      font-size: 39px;
+      width: 360px;
+      @media (min-width: 1400px) {
+        font-size: 64px;
+        width: 580px;
+      }
+  
+        
+      }
+  
+      p {
+       
+      font-family: var(--font-roboto);
+      font-size: 14px;
+      @media (min-width: 1400px) {
+        font-size: 18px;
+      }
+  
+      }
+    }
+  }
