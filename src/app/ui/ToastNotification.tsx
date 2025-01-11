@@ -1,18 +1,18 @@
-import React from 'react';
+import { useCallback, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Компонент для відображення повідомлень
 const ToastNotification = ({ message }: { message: string }) => {
-  const showErrorToast = () => {
+  const showErrorToast = useCallback(() => {
     toast.error(message); // Відображення повідомлення
-  };
+  }, [message]); // Функція залежить від `message`
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (message) {
       showErrorToast(); // Відображення повідомлення, коли воно змінюється
     }
-  }, [message]);
+  }, [message, showErrorToast]); // Додаємо `showErrorToast` до залежностей
 
   return null; // Цей компонент не рендерить нічого, тільки викликає toast
 };

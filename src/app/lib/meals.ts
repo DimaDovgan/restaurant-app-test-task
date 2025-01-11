@@ -4,6 +4,7 @@ export interface Meal {
     strMeal: string;
     strMealThumb: string;
     strInstructions:string;
+    [key: string]: unknown;
     
   }
   
@@ -42,7 +43,7 @@ export interface Meal {
       if (!data.meals || data.meals.length === 0) {
         throw new Error('Не вдалося знайти страви');
       }
-      const filteredMeals = data.meals.map((meal: any) => ({
+      const filteredMeals = data.meals.map((meal: Meal) => ({
         idMeal: meal.idMeal,
         strMeal: meal.strMeal,
         strMealThumb: meal.strMealThumb,
