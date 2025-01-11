@@ -1,5 +1,4 @@
  import styles from "./index.module.scss"
- import React, { Suspense } from "react";
 //  import RevenueChartSkeleton from "./RevenueChartSkeleton";
  
 //  const HeroContent = React.lazy(() => import("./HeroContent"));

@@ -4,6 +4,7 @@ export interface Meal {
     strMeal: string;
     strMealThumb: string;
     strInstructions:string;
+    
   }
   
   const API_URL = "https://www.themealdb.com/api/json/v1/1";
@@ -26,9 +27,13 @@ export interface Meal {
         meals.push(meal); 
       }
       return meals;
-    } catch (error: any) {
-      throw new Error(`Помилка при завантаженні страв: ${error.message}`);
-    }
+    } catch (error) {
+      if (error instanceof Error) {
+          throw new Error(`Помилка при завантаженні страв: ${error.message}`);
+      } else {
+          throw new Error('Невідома помилка при завантаженні страв');
+      }
+  }
   };
   export const fetchMealsByName = async (name: string): Promise<Meal[]> => {
     try {
@@ -45,7 +50,11 @@ export interface Meal {
       }));
   
       return filteredMeals;
-    } catch (error: any) {
-      throw new Error(`Помилка при завантаженні страв: ${error.message}`);
-    }
+    } catch (error) {
+      if (error instanceof Error) {
+          throw new Error(`Помилка при завантаженні страв: ${error.message}`);
+      } else {
+          throw new Error('Невідома помилка при завантаженні страв');
+      }
+  }
   };

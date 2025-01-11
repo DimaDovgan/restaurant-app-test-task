@@ -66,14 +66,14 @@
         position: relative;
       }
       .phonNumber::before {
-        content: ''; /* Потрібно для створення псевдоелемента */
+        content: ''; 
         position: absolute;
-        top: -5px; /* Задайте відстань між елементом і лінією */
-        left: 50%; /* Центруємо лінію */
+        top: -5px;
+        left: 50%;
         transform: translateX(-50%);
         width: 70%;
-        height: 1px; /* Висота лінії */
-        background-color: #FCAC45; /* Колір лінії */
+        height: 1px; 
+        background-color: #FCAC45; 
       }
       .navLinks{
         display: none;

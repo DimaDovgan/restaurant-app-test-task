@@ -27,10 +27,14 @@ export default function Menu() {
             const mealsData = await fetchRandomMeals(3); 
             setMeals((prevMeals) => [...prevMeals, ...mealsData]);
             setLoading(false);
-          } catch (error: any) {
-            setError(`Помилка: ${error.message}`);
+          } catch (err) {
+            if (err instanceof Error) { 
+                setError(`Помилка: ${err.message}`);
+            } else {
+                setError("Невідома помилка");
+            }
             setLoading(false);
-          }
+        }
         };
         if (loadMore) {
           loadMeals(); 

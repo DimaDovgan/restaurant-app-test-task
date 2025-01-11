@@ -26,10 +26,14 @@ export default function Page() {
             const mealsData = await fetchRandomMeals(5); 
             setMeals(mealsData);
             setLoading(false);
-          } catch (error: any) {
-            setError(`Помилка: ${error.message}`);
+          } catch (err) {
+            if (err instanceof Error) { // Перевірка типу помилки
+                setError(`Помилка: ${err.message}`);
+            } else {
+                setError("Невідома помилка");
+            }
             setLoading(false);
-          }
+        }
         };
         loadMeals();
       }, []);
@@ -47,10 +51,14 @@ export default function Page() {
       const mealsData = await fetchMealsByName(searchQuery); 
       setMeals(mealsData);
       setLoading(false);
-    } catch (error: any) {
-      setError(`Помилка: ${error.message}`);
+    } catch (err) {
+      if (err instanceof Error) { // Перевірка типу помилки
+          setError(`Помилка: ${err.message}`);
+      } else {
+          setError("Невідома помилка");
+      }
       setLoading(false);
-    }
+  }
   };
       return (
         <div className={styles.menuContainer}>

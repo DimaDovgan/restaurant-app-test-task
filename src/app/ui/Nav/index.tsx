@@ -5,7 +5,6 @@ import twitterIcon from "@/../public/images/tviter-icon.svg";
 import facebookIcon from "@/../public/images/facebook-icon.svg";
 import instagramIcon from "@/../public/images/instagram-icon.svg";
 import Image from "next/image";
-import { LinkType } from "@/app/lib/definitions";
 import Logo from "../logo";
 import styles from "./index.module.scss";
 import { useState } from "react";

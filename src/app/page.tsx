@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./ui/hero";
 import AboutUs from "./ui/aboutUs";
 import Menu from "./ui/menu";
